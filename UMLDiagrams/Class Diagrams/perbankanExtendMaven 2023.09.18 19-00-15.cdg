@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="perbankanExtendMaven">
+  <ClassDiagramComponents>
+    <Class name="Bank" package="com.mycompany.perbankanextendmaven.Entity" visibility="public" xPosition="98.0" yPosition="380.0">
+      <Fields>
+        <Field name="nasabah" type="Nasabah[]" visibility="private"/>
+        <Field name="jumlahNasabah" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="tambahNasabah" returnType="void" visibility="public">
+          <Argument type="String" name="namaAwal"/>
+          <Argument type="String" name="namaAkhir"/>
+        </Method>
+        <Method name="getJumlahNasabah" returnType="int" visibility="public"/>
+        <Method name="getNasabah" returnType="Nasabah" visibility="public">
+          <Argument type="int" name="indeks"/>
+        </Method>
+        <Method name="getNasabahByIndex" returnType="Nasabah" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Nasabah" package="com.mycompany.perbankanextendmaven.Entity" visibility="public" xPosition="130.0" yPosition="713.0">
+      <Fields>
+        <Field name="namaAwal" type="String" visibility="private"/>
+        <Field name="namaAkhir" type="String" visibility="private"/>
+        <Field name="tabungan" type="Tabungan" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="namaAwal"/>
+          <Argument type="String" name="namaAkhir"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNamaAwal" returnType="String" visibility="public"/>
+        <Method name="getNamaAkhir" returnType="String" visibility="public"/>
+        <Method name="getTabungan" returnType="Tabungan" visibility="public"/>
+        <Method name="setTabungan" returnType="void" visibility="public">
+          <Argument type="Tabungan" name="tabungan"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tabungan" package="com.mycompany.perbankanextendmaven.Entity" visibility="public" xPosition="172.0" yPosition="1109.0">
+      <Fields>
+        <Field name="saldo" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="saldo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSaldo" returnType="int" visibility="public"/>
+        <Method name="simpanUang" returnType="void" visibility="public">
+          <Argument type="int" name="jumlah"/>
+        </Method>
+        <Method name="ambilUang" returnType="boolean" visibility="public">
+          <Argument type="int" name="jumlah"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BankView" package="com.mycompany.perbankanextendmaven.View" visibility="public" xPosition="605.0" yPosition="29.0">
+      <Fields>
+        <Field name="model" type="DefaultTableModel" visibility="public"/>
+        <Field name="isTableClicked" type="boolean" visibility="private"/>
+        <Field name="mainFrame" type="MainFrame" visibility="private"/>
+        <Field name="bank" type="Bank" visibility="private"/>
+        <Field name="buttonAmbilUang" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonBatal" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonEdit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonHapus" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonSimpan" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonSimpanUang" type="javax.swing.JButton" visibility="private"/>
+        <Field name="inputNamaAkhir" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="inputNamaAwal" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tableNasabah" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="MainFrame" name="mainFrame"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="inputNamaAwalActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="buttonAmbilUangActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="buttonSimpanUangActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="buttonBatalActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="buttonHapusActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="inputNamaAkhirKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="inputNamaAkhirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="buttonEditActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tableNasabahMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="buttonSimpanVetoableChange" returnType="void" visibility="private">
+          <Argument type="java.beans.PropertyChangeEvent" name="evt"/>
+        </Method>
+        <Method name="buttonSimpanActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="initTable" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="DatabaseService" package="com.mycompany.perbankanextendmaven.View" visibility="public" xPosition="172.0" yPosition="46.0">
+      <Fields>
+        <Field name="bank" type="Bank" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getBank" returnType="Bank" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="MainFrame" package="com.mycompany.perbankanextendmaven.View" visibility="public" xPosition="1384.0" yPosition="611.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="showView" returnType="void" visibility="public">
+          <Argument type="JPanel" name="view"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TambahUangView" package="com.mycompany.perbankanextendmaven.View" visibility="public" xPosition="605.0" yPosition="782.0">
+      <Fields>
+        <Field name="tableNasabah" type="javax.swing.JTable" visibility="private"/>
+        <Field name="mainFrame" type="MainFrame" visibility="private"/>
+        <Field name="nasabah" type="Nasabah" visibility="private"/>
+        <Field name="buttonKembaliSimpan" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonSimpanSimpan" type="javax.swing.JButton" visibility="private"/>
+        <Field name="inputSimpanUang" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="MainFrame" name="mainFrame"/>
+          <Argument type="Nasabah" name="nasabah"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="inputSimpanUangActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="buttonSimpanSimpanActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="buttonKembaliSimpanActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TarikUangView" package="com.mycompany.perbankanextendmaven.View" visibility="public" xPosition="605.0" yPosition="1226.0">
+      <Fields>
+        <Field name="tableNasabah" type="javax.swing.JTable" visibility="private"/>
+        <Field name="mainFrame" type="MainFrame" visibility="private"/>
+        <Field name="nasabah" type="Nasabah" visibility="private"/>
+        <Field name="buttonKembaliAmbil" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonSimpanAmbil" type="javax.swing.JButton" visibility="private"/>
+        <Field name="inputAmbilUang" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="MainFrame" name="mainFrame"/>
+          <Argument type="Nasabah" name="nasabah"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="inputAmbilUangActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="buttonSimpanAmbilActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="buttonKembaliAmbilActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="nasabah" source="com.mycompany.perbankanextendmaven.View.TambahUangView" target="com.mycompany.perbankanextendmaven.Entity.Nasabah" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bank" source="com.mycompany.perbankanextendmaven.View.DatabaseService" target="com.mycompany.perbankanextendmaven.Entity.Bank" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mainFrame" source="com.mycompany.perbankanextendmaven.View.TarikUangView" target="com.mycompany.perbankanextendmaven.View.MainFrame" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.perbankanextendmaven.View.DatabaseService" target="com.mycompany.perbankanextendmaven.Entity.Bank" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="nasabah" source="com.mycompany.perbankanextendmaven.View.TarikUangView" target="com.mycompany.perbankanextendmaven.Entity.Nasabah" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tabungan" source="com.mycompany.perbankanextendmaven.Entity.Nasabah" target="com.mycompany.perbankanextendmaven.Entity.Tabungan" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bank" source="com.mycompany.perbankanextendmaven.View.BankView" target="com.mycompany.perbankanextendmaven.Entity.Bank" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mainFrame" source="com.mycompany.perbankanextendmaven.View.TambahUangView" target="com.mycompany.perbankanextendmaven.View.MainFrame" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.perbankanextendmaven.Entity.Bank" target="com.mycompany.perbankanextendmaven.Entity.Nasabah" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mainFrame" source="com.mycompany.perbankanextendmaven.View.BankView" target="com.mycompany.perbankanextendmaven.View.MainFrame" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.perbankanextendmaven.Entity.Nasabah" target="com.mycompany.perbankanextendmaven.Entity.Tabungan" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
